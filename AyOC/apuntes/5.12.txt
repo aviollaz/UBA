@@ -1,0 +1,72 @@
+Ejecucion fuera de orden (OOO Execution):
+
+nunca se va a stallear la pipeline. Si una instruccion no tiene
+todos los operandos listos, se abre una "ventana" mas, que busca alguna
+instruccion mas adelante que tenga todos los operandos listos
+
+que necesita un procesador para implementar OOO Exec?
+    - mantener un "link" entre el productor de un dato con sus consumidores:
+        ejemplo: la suma produce un dato. Todas las instrucciones que dependen del dato producido por la suma
+        se linkean de alguna forma. (la suma es un mal ejemplo porque se resuelve en un ciclo)
+
+        esto altera el orden del programa? 
+            no, porque adelanto todo menos la escritura del dato.
+            Calculo todo y hago el "commit" de cada dato en orden
+
+        la solucion es Register renaming: un file register
+            permite asociar un tag con cada operando
+
+            tiene una tabla que guarda el valor de los registros, y un bit que dice su validez. si el valor de un
+            registro no esta actualizado, el registro va a decir invalido, y se usara un alias para reemplazar al registro
+            no disponible.
+        
+            un registro puede tener multiples renamings
+            
+    - Mantener las instrucciones en espera hasta que esten listas para
+    ejecucion
+
+
+    - Las instrucciones deben saber cuando sus operandos estan
+    “Ready”
+
+    - 4 Despachar (“disparar”) la instruccion a su Unidad Funcional ni bien 
+    todos sus operandos esten “Ready”. 
+
+       
+reservation station: otro file register, con mas de n entradas. es un subsistema de hardware encargado de implementar
+las otras tres funciones que planteo tomasulo en su algoritmo.
+    si hay muchos writes a un solo registro, solo se evalua el ultimo write
+
+    cuando se resuelve una instruccion en el reservation station, se manda por un bus general el dato resultante junto
+    a su tag (indice en el reservation station), entonces ese tag es reemplazado por el dato en todo el sistema.
+
+
+-----------------------------------------------------------------------
+
+inicializacion de un computador IA-32 desde el reset 
+
+reset vector 
+
+calculo de la direccion del reset vector en modo real, a partir de los valores iniciales:
+EIP = 0x0000FFF0
+CS = 0xF000 <- esta es la parte visible. CS tiene una parte oculta, que luego del reeset toma los siguientes valores
+
+
+direcciones:
+
+fisicas: direccion que sale por el bus address del procesador (direccioon de hardware)
+logica: expresada en terminos abstracta. Una forma simple de trabajar en forma transparente con la memoria
+virtual: en la mayoria de los procesadores coincide con la logica, menos con la de intel
+
+memory management unit:
+    cambia el mapeo dentre una direccion logica y la direccion fisica 
+
+    provee una vision de la memoria fisica, dividida en fragmentos para 
+    su mejor administracion
+
+    permite al OS asignar el mismo espacio de direcciones logicas para
+    los procesos, separandolos en la memoria fisica
+
+
+    
+

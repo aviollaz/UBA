@@ -1,0 +1,25 @@
+como funciona define:
+db 0x00, 0x01, 0x02, 0x03 ; se guardan en ese mismo orden en memoria
+
+(define double)
+dd 0x00010203, 0x04050607 ; se guarda en memoria como [0x03, 0x02, 0x01, 0x00, 0x07, 0x06, 0x05, 0x04]
+
+
+como definir un pixel en asm:
+
+mi_pixel: db 0xRR, 0xGG, 0xBB, 0xAA 
+
+tambien se puede definir como una double word,
+pero tendria que escribirlo como ABGR por como funciona little endian
+mi_pixel: dd 0xAABGGRR
+
+
+single instruction, multiple data (SIMD)
+
+objetivo: procesar grandes volumenes de datos de forma eficiente
+
+felixCloutier.com
+
+pshufb:
+
+

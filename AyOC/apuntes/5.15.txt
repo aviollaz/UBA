@@ -1,0 +1,65 @@
+system programming
+
+
+
+    - mayormente codificado en C y assembly
+
+    - no tenemos librerias (printf, fopen...)
+
+    - debuggear es mas dificil
+
+    - no hay un formato binario definido (no hay concepto de archivo)
+
+es la produccion de software que permite generar abstracciones
+
+vamos a ver:
+    - manejo de memoria: segmentacion y paginacion
+    - manejo de interrupciones
+    - conmutacion de tareas
+    - politicas de acceso y proteccion
+
+cuando arranca el procesador, arranca en modo real.
+modo real: Es el modo en el que arrancan todos los procesadores x86
+    - 16 bits
+    - 1MB de memoria
+    - direccionamoiento mas limitado que en modo protegido
+    - no hay proteccion de memoria (segmentation faults)
+    - todas las instrucciones disponibles
+
+modo protegido: 
+    - 32 bits
+    - 4GB de memoria (solo vamos a usar 2GB)
+    - 4 niveles de proteccion
+    - instrucciones disponibles dependen del nivel de privilegio
+
+en la practica se usan los niveles de privilegio 0 y 3 
+
+direcciones de 20 bits se forman con 2 componentes de 16 bits (??)
+segmento : offset
+0x12f3 : 0x4b23
+
+vamos a usar qemu (emulador de x86)
+    - instrucciones privilegiadas
+    - ver estructuras del kernel
+    - ejecucion controlada con posibilidad de debuggear!!!!!
+
+---------------------------------------------------------------
+pasaje a modo protegido
+
+    - bootloader: es el primer programa que corre el procesador
+        ejecuta codigo del BIOS
+        bios ejecuta POST (power on self test)
+        BIOS busca un dispositivo booteable
+            se copia a memoria principal el codigo de la bios en 0x7c00
+    - armado de GDT
+        
+    
+BIOS: 
+    un mini pedazo de memoria read-only que tiene rutinas 
+    
+
+
+
+
+
+

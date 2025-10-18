@@ -1,0 +1,8 @@
+use info functions para ver todas las funciones disponibles en el debugger
+
+entre a las que tenian nombre sospechoso
+
+utilizo "backtrace" para ver una lista de los stack frames anidados
+
+en cada stack frame me fije las variables locales haciendo:
+p ({tipo} 0xDireccionDeMemoriaDeLasVariables)@CantidadDeVariablesALeer
