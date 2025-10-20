@@ -1,0 +1,85 @@
+
+
+----STARTUP---- (20 October 2025 12:32:33) as /home/andre/Documents/etc/UBA/ISW/linux64/linux64/misSoluciones.image!
+
+
+!classRemoval: #WarpThruster stamp: 'av 10/20/2025 12:32:58'!
+Thruster subclass: #WarpThruster
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #ImpulseThruster stamp: 'av 10/20/2025 12:32:59'!
+Thruster subclass: #ImpulseThruster
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #GravitonThruster stamp: 'av 10/20/2025 12:32:59'!
+Thruster subclass: #GravitonThruster
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #Thruster stamp: 'av 10/20/2025 12:32:59'!
+Object subclass: #Thruster
+	instanceVariableNames: 'type'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #SpaceShip stamp: 'av 10/20/2025 12:32:59'!
+Object subclass: #SpaceShip
+	instanceVariableNames: 'thrusters maneuverability shields fuel maxDamageLevel survived damage'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #PlanetarySector stamp: 'av 10/20/2025 12:32:59'!
+Sector subclass: #PlanetarySector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #NebulaSector stamp: 'av 10/20/2025 12:32:59'!
+Sector subclass: #NebulaSector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #AsteroidsSector stamp: 'av 10/20/2025 12:32:59'!
+Sector subclass: #AsteroidsSector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #Sector stamp: 'av 10/20/2025 12:32:59'!
+Object subclass: #Sector
+	instanceVariableNames: 'type gravity radiation'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #FleetRun stamp: 'av 10/20/2025 12:32:59'!
+Object subclass: #FleetRun
+	instanceVariableNames: 'fleet survivors'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+!classRemoval: #FleetRunTests stamp: 'av 10/20/2025 12:32:59'!
+TestCase subclass: #FleetRunTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'ISW-Parcial1-1C25'!
+
+----SNAPSHOT----(20 October 2025 12:33:10) misSoluciones.image priorSource: 6972408!
+
+----SNAPSHOT----(20 October 2025 12:33:18) misSoluciones.image priorSource: 6974907!
