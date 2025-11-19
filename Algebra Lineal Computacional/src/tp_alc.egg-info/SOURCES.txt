@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/alc.py
+src/headLayer.py
+src/preprocess.py
+src/pseudoInversa.py
+src/tp_alc.egg-info/PKG-INFO
+src/tp_alc.egg-info/SOURCES.txt
+src/tp_alc.egg-info/dependency_links.txt
+src/tp_alc.egg-info/requires.txt
+src/tp_alc.egg-info/top_level.txt
+tests/test_qr.py

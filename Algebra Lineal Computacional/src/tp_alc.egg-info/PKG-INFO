@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: tp-alc
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.3.4
+Requires-Dist: polars>=1.35.1
+Requires-Dist: pytest>=9.0.0
+
+# Trabajo Práctico - Álgebra Lineal Computacional UBA | 2c-2025
+ 
+Consigna: [Enunciado](Enunciado.pdf)
+
+### Integrantes
+
+|Alumno|LU|
+|----|---|
+|Sebastián Andrés|1028/22|
+|Vicente Tenconi|1171/22|
+|André ...|.|
+|Juan Pablo ...|.|
+
+### Sobre el repositorio
+`/src`
+- Agregamos las funciones del módulo en el archivo [src/alc.py](src/alc.py).
+- El preprocesamiento de los datos está en el módulo [src/preprocess.py](src/preprocess.py).
+- Los algoritmos de procesamiento y creación de la matríz $W_a$ están en [src/headLayer.py](src/headLayer.py).
+
+`Notebooks`: 
+- Armamos un notebook con los experimentos: [Experimentos](Experiments.ipynb).
+
+### Entorno
+Para el manejo del entorno usamos `uv`.
+
+~~~bash
+# Setup
+uv venv
+uv sync
+
+# Ejecución
+uv run python <file>
+~~~
+
+
